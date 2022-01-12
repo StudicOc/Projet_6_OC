@@ -102,7 +102,7 @@ exports.postLikesDislike = (req, res, next) => {
       allLike();
       //---------2 CONDITION POUR LES DESLIKES-------------//
 
-      //--- Si like = -1,l'utilisateur n'aime pas (=dislike) la sauce.
+      //--- Si like = -1 si l'utilisateur n'aime pas (=dislike) la sauce.
 
       function allDislikes() {
         if (
