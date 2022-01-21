@@ -10,6 +10,7 @@ const auth = require("../middleware/auth");
 
 const multer = require("../middleware/multer-config");
 
+//---L'authentification doit être renforcée sur toutes les routes sauce requises.---//
 router.get("/", auth, sauceCtrl.getAllSauces);
 router.post("/", auth, multer, sauceCtrl.createSauce);
 router.get("/:id", auth, sauceCtrl.getOneSauce);
