@@ -2,6 +2,9 @@ const Sauce = require("../models/Sauce");
 
 const fs = require("fs"); //---files system--//
 
+//---IMPORTATION DE LA LOGIQUE DE CHAQUE REQUETE HTTP---//
+
+//--- Création d'une sauce---//
 exports.createSauce = (req, res, next) => {
   const userSauce = JSON.parse(req.body.sauce);
 
@@ -10,7 +13,7 @@ exports.createSauce = (req, res, next) => {
     ...userSauce,
     imageUrl: `${req.protocol}://${req.get("host")}/images/${
       req.file.filename
-    }`, //---Le frontend doit reconnaître--//
+    }`,
   });
   console.log(sauce);
   sauce
@@ -19,6 +22,7 @@ exports.createSauce = (req, res, next) => {
     .catch((error) => res.status(400).json({ error }));
 };
 
+//---Récupération d'une sauce spécifique--//
 exports.getOneSauce = (req, res, next) => {
   Sauce.findOne({
     _id: req.params.id,
@@ -33,6 +37,7 @@ exports.getOneSauce = (req, res, next) => {
     });
 };
 
+//--- Modification d'une sauce---//
 exports.modifySauce = (req, res, next) => {
   const userSauce = req.file
     ? {
@@ -47,6 +52,7 @@ exports.modifySauce = (req, res, next) => {
     .catch((error) => res.status(400).json({ error }));
 };
 
+//---Supression d'une sauce---//
 exports.deleteSauce = (req, res, next) => {
   Sauce.findOne({ _id: req.params.id })
     .then((sauce) => {
@@ -60,6 +66,7 @@ exports.deleteSauce = (req, res, next) => {
     .catch((error) => res.status(500).json({ error }));
 };
 
+//--- Affichage de toutes les sauces--//
 exports.getAllSauces = (req, res, next) => {
   Sauce.find()
     .then((sauces) => {

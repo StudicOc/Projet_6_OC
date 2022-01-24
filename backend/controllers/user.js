@@ -1,7 +1,10 @@
+// ---Package de cryptage pour le mot de passe---//
 const bcrypt = require("bcrypt");
+//--- Package pour une authentification par token---//
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 
+//---- Fonction signup ----//
 exports.signup = (req, res, next) => {
   bcrypt
     .hash(req.body.password, 10)
@@ -17,7 +20,7 @@ exports.signup = (req, res, next) => {
     })
     .catch((error) => res.status(500).json({ error }));
 };
-
+//--- Fonction login---//
 exports.login = (req, res, next) => {
   User.findOne({ email: req.body.email })
     .then((user) => {
