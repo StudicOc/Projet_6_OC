@@ -13,7 +13,11 @@ Notre API doit respecter des exigences de sécurité :
 - Gestion du contrôle d'accés pour que les utilisateurs ne puissent pas modifier ou supprimer une sauce d'autres utilisateurs.
 - Adresse email unique.
 
-Logiciels et services utilisés :
+Framework et services utilisés :
 
 - MangoDB
 - Express.js
+
+Plugins :
+
+- uniqueValidator
