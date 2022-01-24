@@ -132,5 +132,7 @@ exports.postLikesDislike = (req, res, next) => {
       }
     }) //---Fin de la promise then---//
 
+    //--- GESTION DES ERREURS---//
+
     .catch((error) => res.status(500).json({ error }));
 };

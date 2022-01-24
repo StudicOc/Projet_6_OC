@@ -1,5 +1,8 @@
+//----GESTION DES FICHIERS ENTRANTS---//
+
 const multer = require("multer");
 
+//---Type de fichier accepté--//
 const MIME_TYPES = {
   "image/jpg": "jpg",
   "image/jpeg": "jpg",
