@@ -1,6 +1,6 @@
 # Projet_6_OC
 
-## Conception de l'API
+## Conception de l'API 🔥
 
 Construire une API sécurisée pour une application d'avis gastronomiques.
 
@@ -38,3 +38,11 @@ Afin d'assurer la sécurité de notre application et les données de nos utilisa
 
 - Installer le package `npm install mongoose-unique-validator`, afin d'éviter que deux utilisateurs utilisent la même adresse mail et qu'elle soit unique.
 - Point très important, installer le package `npm install bcrypt`, il stocke sous forme de hachage (hash), chiffrement de données. 🔒
+- Installer `npm install jsonwebtoken` pour gérer les tokens d'authentification.
+
+## Installation Files 📂
+
+Afin de gérer les fichiers entrants de nos utilisateur, il est primordial d'ajouter notre package
+`npm install multer`.
+
+🖼️ Plusieurs types d'image seront acceptés, jpg, png.
