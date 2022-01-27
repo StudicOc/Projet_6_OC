@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 
 //---Path donne acces à notre chemin de system de fichiers.
 const path = require("path");
+const helmet = require("helmet");
 
 const sauceRoutes = require("./routes/sauce");
 const userRoutes = require("./routes/user");
@@ -36,4 +37,6 @@ app.use(express.json()); //---Intercepte toutes requêtes qui ont un content-typ
 app.use("/images", express.static(path.join(__dirname, "images"))); //---Path donne acces à notre chemin de system de fichiers.
 app.use("/api/sauces", sauceRoutes);
 app.use("/api/auth", userRoutes);
+
+app.use(helmet());
 module.exports = app;
