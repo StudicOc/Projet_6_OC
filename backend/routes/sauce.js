@@ -1,4 +1,4 @@
-//--Déportation de logique de routine---//
+//--Déportation de logique de routing---//
 
 const express = require("express");
 

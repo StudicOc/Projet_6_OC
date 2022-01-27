@@ -1,5 +1,9 @@
+//--- Authentification par Token---//
+
+//---Importation du package---//
 const jwt = require("jsonwebtoken");
 
+//--- Middleware--//
 module.exports = (req, res, next) => {
   try {
     const token = req.headers.authorization.split(" ")[1];
