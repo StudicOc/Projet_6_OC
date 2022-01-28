@@ -20,12 +20,6 @@ Chque utilisateur peut modifier, supprimer sa propre sauce.
 - MangoDB
 - Express.js
 
-## Usage
-
-Exécutez `nodemon server` pour démarrer votre serveur.
-
-Exécutez `npm install mongoose` pour enregistrer nos données de notre application.
-
 ## Installation ⚙️
 
 - Intallation de nodemon, exécutez `npm install -g nodemon`.
@@ -46,3 +40,15 @@ Afin de gérer les fichiers entrants de nos utilisateur, il est primordial d'ajo
 `npm install multer`.
 
 🖼️ Plusieurs types d'image seront acceptés, jpg, png.
+
+## Usage
+
+Exécutez `nodemon server` pour démarrer votre serveur.
+
+Exécutez `npm install mongoose` pour enregistrer nos données de notre application.
+
+## Important information
+
+Afin de tester l'application, veuillez créer un dossier `images` en suivant la même syntaxte.
+
+Le dossier est renvoyé sur le fichier `.gitignore` afin de ne pas envoyer les images sur github.
