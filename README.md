@@ -20,14 +20,18 @@ Chque utilisateur peut modifier, supprimer sa propre sauce.
 - MangoDB
 - Express.js
 
+## Usage
+
+Se rendre dans le dossier Front-end et lancer :`run npm install`, and `run npm install --save-dev run-script-os`.
+
 ## Lancement des services Frontend et Backend
 
-- Avec la commande `cd` se rendre dans le backend et lancer le serveur: `nodemon server`
-- Avec la commande `cd` se rendre dans Front-end et lancer l'application :`run npm install`, and `run npm install --save-dev run-script-os`, démarrer l'application avec `npm start`.
+- Avec la commande `cd` se rendre dans le dossier backend et lancer le serveur: `nodemon server`.
+- Avec la commande `cd` se rendre dans le dossier Front-end et lancer l'application `npm start`.
 
 ## Installation Backend ⚙️
 
-Installer les dépendances qui seront recquis pour notre application :
+Installer les dépendances qui seront recquis pour notre application depuis le dossier backend :
 
 - Nodemon, `npm install -g nodemon`
 - Framework Express.js, `npm install express --save`
