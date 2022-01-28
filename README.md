@@ -20,32 +20,23 @@ Chque utilisateur peut modifier, supprimer sa propre sauce.
 - MangoDB
 - Express.js
 
-## Installation ⚙️
+## Installation Backend ⚙️
 
-- Intallation de nodemon, exécutez `npm install -g nodemon`.
+Installer les dépendances qui seront recquis pour notre application :
 
-- Installation du framework Express.js, exécutez `npm install express --save`.
+- Nodemon, `npm install -g nodemon`
+- Framework Express.js, `npm install express --save`
+- Unique `npm install mongoose-unique-validator`
+- Bcrypt `npm install bcrypt`
+- Token `npm install jsonwebtoken`
+- Multer `npm install multer`
 
-## Installation User ⚙️
-
-Afin d'assurer la sécurité de notre application et les données de nos utilisateurs :
-
-- Installer le package `npm install mongoose-unique-validator`, afin d'éviter que deux utilisateurs utilisent la même adresse mail et qu'elle soit unique.
-- Point très important, installer le package `npm install bcrypt`, il stocke sous forme de hachage (hash), chiffrement de données. 🔒
-- Installer `npm install jsonwebtoken` pour gérer les tokens d'authentification.
-
-## Installation Files 📂
-
-Afin de gérer les fichiers entrants de nos utilisateur, il est primordial d'ajouter notre package
-`npm install multer`.
-
-🖼️ Plusieurs types d'image seront acceptés, jpg, png.
+Faire `npm list` pour vérifier la bonne installation des packages.
 
 ## Usage
 
-Exécutez `nodemon server` pour démarrer votre serveur.
-
-Exécutez `npm install mongoose` pour enregistrer nos données de notre application.
+- Avec la commande `cd` se rendre dans le backend et lancer le serveur: `nodemon server`
+- Avec la commande `cd` se rendre dans Front-end et lancer l'application :`run npm install`, and `run npm install --save-dev run-script-os`, démarrer l'application avec `npm start`.
 
 ## Important information
 
