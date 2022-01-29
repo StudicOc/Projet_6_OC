@@ -40,8 +40,10 @@ app.use("/images", express.static(path.join(__dirname, "images"))); //---Path do
 app.use("/api/sauces", sauceRoutes);
 app.use("/api/auth", userRoutes);
 
-//--- Sécurisation  des en-têtes HTTP---//
+//--- Sécurisation des en-têtes HTTP---//
 
 app.use(helmet());
+
+app.disable("x-powered-by");
 
 module.exports = app;
