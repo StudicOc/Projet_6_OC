@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 
 //---Path donne acces à notre chemin de system de fichiers.
 const path = require("path");
+
 const helmet = require("helmet");
 
 const sauceRoutes = require("./routes/sauce");
@@ -10,6 +11,7 @@ const userRoutes = require("./routes/user");
 
 const app = express();
 
+//--- CORS---//
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*"); //--Accés pour tous--//
   res.setHeader(
@@ -38,5 +40,8 @@ app.use("/images", express.static(path.join(__dirname, "images"))); //---Path do
 app.use("/api/sauces", sauceRoutes);
 app.use("/api/auth", userRoutes);
 
+//--- Sécurisation  des en-têtes HTTP---//
+
 app.use(helmet());
+
 module.exports = app;
