@@ -9,10 +9,13 @@ const MIME_TYPES = {
   "image/png": "png",
 };
 
+//--- Objet de config pour multer---//
 const storage = multer.diskStorage({
+  //--First argument--//
   destination: (req, file, callback) => {
-    callback(null, "images");
+    callback(null, "images"); //---Enregistrement ---//
   },
+  //---Next argument---//
   filename: (req, file, callback) => {
     const name = file.originalname.split(" ").join("_");
     const extension = MIME_TYPES[file.mimetype];

@@ -46,4 +46,6 @@ app.use(helmet());
 
 app.disable("x-powered-by");
 
+//---Protection des attaques XSS--//
+app.use(helmet.xssFilter());
 module.exports = app;
