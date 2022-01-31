@@ -1,3 +1,7 @@
+//-- Variables d'environnement---//*
+
+require("dotenv").config();
+
 const express = require("express");
 const mongoose = require("mongoose");
 
@@ -26,11 +30,12 @@ app.use((req, res, next) => {
 });
 
 //---Connection de notre base de donnée MANGODB---//
+
 mongoose
-  .connect(
-    "mongodb+srv://Hot-sauces-P6:projet6sauce@cluster0.ga9k0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-    { useNewUrlParser: true, useUnifiedTopology: true }
-  )
+  .connect(process.env.MB, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => console.log("Connexion à MongoDB réussie !"))
   .catch(() => console.log("Connexion à MongoDB échouée !"));
 
